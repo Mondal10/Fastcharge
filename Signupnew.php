@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<?php
+session_start();
+$Fname=$_POST['Fname'];
+$Lname=$_POST['Lname'];
+$rtype=$_POST['rtype'];
+$signupdttim=$_POST['signupdttim'];
+$contact=$_POST['contact'];
+$email=$_POST['email'];
+$psd=$_POST['psd'];
+
+$conn = mysqli_connect("localhost","root","","fastcharge");
+if(!$conn){  
+  die('Could not connect: '.mysqli_connect_error());  
+}
+
+$sql = "INSERT INTO signup(`FName`, `LName`, `rtype`, `signupdttim`, `contact`, `email`, `psd`) VALUES ('$Fname', '$Lname', '$rtype', '$signupdttim', '$contact', '$email', '$psd');";
+if(mysqli_query($conn, $sql))
+{  
+	echo 'Inserted in Signup ';
+	//header("Location:Fastcharge.html");
+}
+else
+{  
+	echo "Could not insert record: ". mysqli_error($conn);  
+}
+	$sql1 = "INSERT INTO login(`username`, `password`) VALUES ('$Fname', '$psd');";
+	if(mysqli_query($conn, $sql1))
+	{  
+		echo 'Added in Login Table';
+		//header("Location:Fastcharge.html");
+	}
+	else
+
+	{  
+		echo "Could not insert record: ". mysqli_error($conn);  
+	} 
+mysqli_close($conn); 
+?>
+</body>
+</html>

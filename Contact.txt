@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+<title>Contact</title>
+</head>
+<body background="background3.jpg">
+
+<font face="tahoma" size="5" color="#00AFAF">
+<h1>Contact us!! Hey, you!</h1>
+
+<p>Guess what? We hate going about our job, day in and day out, with no human contact.<br>
+We love someone who'd like to talk to us or tell things to our face, someone who we can bounce ideas with or team up with,<br> or someone who would just make friends with us!
+
+If you want to put a face to the name FastCharge, drop in and say hey at:
+<mark>Peninsula Tower, 22nd floor, Bandra Kurla Complex, Bandra East, Mumbai - 400051</mark>
+</p>
+<p> And if youre shy or just busy or online friendly like us you can drop by at any of the addresses given below.
+We'll write back. Promise!</p>
+
+
+<ul>
+  <li>Business Queries : partnerup@fastcharge.com</li>
+  <li>Payment Queries : payment@fastcharge.com</li>
+  <li>Customer Queries : customerq@fastcharge.com</li>
+</ul>
+</font>
+</body>
+</html>
